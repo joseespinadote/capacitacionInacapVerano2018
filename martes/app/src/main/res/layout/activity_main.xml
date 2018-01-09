@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alumnossur.martes.MainActivity">
+    <include layout="@layout/barra"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="invitacion"
+        android:onClick="lanzaInvitacion"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="otro"
+        android:onClick="lanzaOtraActividad"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cafe"
+        android:onClick="lanzaActividadCafe"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="te"
+        android:onClick="lanzaActividadTe"/>
+</LinearLayout>
+
+<!--
+xmlns:app="http://schemas.android.com/apk/res-auto"
+-->
