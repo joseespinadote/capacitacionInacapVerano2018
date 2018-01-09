@@ -13,7 +13,8 @@
         <EditText
             android:id="@+id/txtNombre"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="ingrese nombre (no puede ir vacio)"/>
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"

@@ -34,5 +34,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void lanzaActividadTe(View view) {
+        Intent i = new Intent(this, ActivityTea.class);
+        startActivity(i);
     }
 }

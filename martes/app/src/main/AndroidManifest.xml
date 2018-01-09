@@ -19,10 +19,20 @@
         <activity
             android:name=".ActivityInvitation"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".ActivityCofee"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".Main2Activity"
-            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".ActivityCofee"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Main2Activity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ActivityTea"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DetalleTe"
+            android:label="@string/title_activity_detalle_te"
+            android:theme="@style/AppTheme"
+            android:parentActivityName=".ActivityTea" />
     </application>
 
 </manifest>
