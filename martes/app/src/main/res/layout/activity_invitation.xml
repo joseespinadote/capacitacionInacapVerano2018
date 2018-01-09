@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alumnossur.martes.ActivityInvitation">
+    <include layout="@layout/barra"></include>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_below="@+id/barraAplicacion"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textStyle="bold"
+        android:textSize="50sp"
+        android:textColor="@android:color/holo_blue_dark"/>
+</RelativeLayout>
+
+<!--
+xmlns:app="http://schemas.android.com/apk/res-auto"
+-->

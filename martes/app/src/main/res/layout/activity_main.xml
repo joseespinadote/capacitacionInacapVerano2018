@@ -3,9 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.alumnossur.martes.MainActivity">
+    tools:context="com.example.alumnossur.martes.MainActivity"
+    android:orientation="vertical">
     <include layout="@layout/barra"/>
     <Button
+        android:layout_margin="5sp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="invitacion"

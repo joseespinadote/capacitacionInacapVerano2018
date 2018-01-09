@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ActivityInvitation"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".ActivityCofee"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".Main2Activity"
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>
