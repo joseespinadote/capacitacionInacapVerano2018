@@ -3,6 +3,7 @@ package com.example.alumnossur.martes.adapter;
 import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,8 +39,8 @@ public class TeAdapter extends RecyclerView.Adapter<TeAdapter.teViewHolder>{
         te = lista.get(position);
         holder.cardTitle.setText(te.getTitle());
         holder.cardImage.setImageResource(te.getResourceImage());
-
-        // para el detalle de te
+/*
+        // para el detalle de te (buggy)
         holder.cardImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,6 +50,7 @@ public class TeAdapter extends RecyclerView.Adapter<TeAdapter.teViewHolder>{
                 actitivy.startActivity(i);
             }
         });
+        */
     }
 
     @Override
@@ -64,6 +66,16 @@ public class TeAdapter extends RecyclerView.Adapter<TeAdapter.teViewHolder>{
             super(itemView);
             cardImage = itemView.findViewById(R.id.tarjetaImagen);
             cardTitle = itemView.findViewById(R.id.tarjetaTitulo);
+
+            cardImage.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(actitivy, DetalleTe.class);
+                    i.putExtra("TITULO", cardTitle.getText().toString());
+                    i.putExtra("IMAGEN", Te.getImageDrawable(cardTitle.getText().toString()));
+                    actitivy.startActivity(i);
+                }
+            });
         }
     }
 }

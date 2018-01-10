@@ -45,4 +45,14 @@ public class Te {
         lista.add(new Te("ñañañña", android.R.mipmap.sym_def_app_icon));
         return lista;
     }
+
+    public static int getImageDrawable(String title) {
+        ArrayList<Te> lista = getLista();
+        for (int index = 0; index < getLista().size(); index++) {
+            if (lista.get(index).getTitle()=="title") {
+                return index;
+            }
+        }
+        return 0;
+    }
 }
