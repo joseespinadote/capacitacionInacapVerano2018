@@ -40,7 +40,7 @@ public class TeAdapter extends RecyclerView.Adapter<TeAdapter.teViewHolder>{
         holder.cardTitle.setText(te.getTitle());
         holder.cardImage.setImageResource(te.getResourceImage());
 /*
-        // para el detalle de te (buggy)
+        // para el detalle de te (buggy... objeto te sucio. se depreca por una solucion bien mala)
         holder.cardImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
