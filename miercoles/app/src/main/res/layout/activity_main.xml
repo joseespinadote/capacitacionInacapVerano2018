@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cl.jespina.miercoles.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btnVerComentarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver comentarios"
+            android:onClick="btnVerComentariosClick"/>
+        <Button
+            android:id="@+id/btnInsertarComentario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Insertar comentarios"
+            android:onClick="btnInsertarComentarioClick"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
