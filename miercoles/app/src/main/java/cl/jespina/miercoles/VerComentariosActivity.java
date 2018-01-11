@@ -20,9 +20,6 @@ import modelo.Comentario;
 
 public class VerComentariosActivity extends AppCompatActivity {
 
-    protected RecyclerView recycler;
-    protected AdaptadorComentarios adaptador;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +28,6 @@ public class VerComentariosActivity extends AppCompatActivity {
     }
 
     public void leeComentarios() {
-        Log.i("JOSE", "btn1 clickeado");
         AsyncHttpClient clienteAsincrono = new AsyncHttpClient();
         String url = "http://rapidfresh.todojava.net/index.php/comments";
         clienteAsincrono.post(url, new AsyncHttpResponseHandler() {
@@ -69,7 +65,7 @@ public class VerComentariosActivity extends AppCompatActivity {
         }
 
         AdaptadorComentarios adaptador = new AdaptadorComentarios(arrComentarios);
-        recycler = findViewById(R.id.recyclerComentarios);
+        RecyclerView recycler = findViewById(R.id.recyclerComentarios);
         LinearLayoutManager llm = new LinearLayoutManager(this);
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recycler.setLayoutManager(llm);

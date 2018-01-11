@@ -5,10 +5,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
+
+import org.json.JSONObject;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -36,14 +39,23 @@ public class InsertarComentariosActivity extends AppCompatActivity {
             @Override
             public void onSuccess(int statusCode, Header[] headers, byte[] responseBody) {
                 if (statusCode==200) {
-                    String respuesta = new String(responseBody);
+                    try {
+                        JSONObject json = new JSONObject(new String(responseBody));
+                        mostrarMensajeTostada(json.getString("result"));
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
 
             @Override
             public void onFailure(int statusCode, Header[] headers, byte[] responseBody, Throwable error) {
-
+                mostrarMensajeTostada(new String(responseBody));
             }
         });
+    }
+
+    private void mostrarMensajeTostada(String mensaje) {
+        Toast.makeText(this,mensaje,Toast.LENGTH_LONG).show();
     }
 }
