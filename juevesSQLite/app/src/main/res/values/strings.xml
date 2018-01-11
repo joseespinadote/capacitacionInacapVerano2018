@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LAS MASCOTAS DEL JUEVES!</string>
+    <string-array name="opcionesGenero">
+        <item>Macho</item>
+        <item>Hembra</item>
+    </string-array>
+</resources>

@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cl.jespina.juevessqlite.NuevaMascotaFragment">
+    <EditText
+        android:id="@+id/txtFragNuevaNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="Nombre del animalito"/>
+    <EditText
+        android:id="@+id/txtFragNuevaPeso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="Peso en kilos"/>
+    <Spinner
+        android:id="@+id/spinnerFragNuevaGenero"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:entries="@array/opcionesGenero"/>
+    <Button
+        android:id="@+id/btnFragNuevaMascota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="guarda"/>
+</LinearLayout>
